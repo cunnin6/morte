@@ -1,0 +1,83 @@
+{
+  "_comment": "Animation recipes for the Morte plugin (sprite strips built by pipeline/build_plugin.py). Moods, weights and content: plugin/moods.json, hook/lines.json, hook/clips.json.",
+  "animations": {
+    "spin": {
+      "fps": 16,
+      "segments": [
+        {
+          "gaze": true
+        }
+      ]
+    },
+    "tumble": {
+      "fps": 12,
+      "hop": true,
+      "segments": [
+        {
+          "anim": "CHIT",
+          "cycle": 0,
+          "count": 12
+        }
+      ]
+    },
+    "flourish": {
+      "fps": 10,
+      "segments": [
+        {
+          "anim": "CSF1",
+          "cycle": 0,
+          "count": 11,
+          "start": 3,
+          "end": 14
+        }
+      ]
+    },
+    "pratfall": {
+      "fps": 8,
+      "segments": [
+        {
+          "anim": "CDFB",
+          "cycle": 0,
+          "count": 8
+        },
+        {
+          "anim": "CGUP",
+          "cycle": 0,
+          "count": 8
+        }
+      ]
+    },
+    "fall": {
+      "fps": 8,
+      "segments": [
+        {
+          "anim": "CDFB",
+          "cycle": 0,
+          "count": 8
+        }
+      ]
+    },
+    "dead": {
+      "fps": 8,
+      "segments": [
+        {
+          "anim": "CDFB",
+          "cycle": 0,
+          "count": 1,
+          "start": 15,
+          "end": 16
+        }
+      ]
+    },
+    "getup": {
+      "fps": 8,
+      "segments": [
+        {
+          "anim": "CGUP",
+          "cycle": 0,
+          "count": 8
+        }
+      ]
+    }
+  }
+}

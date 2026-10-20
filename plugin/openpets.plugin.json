@@ -1,0 +1,288 @@
+{
+  "manifestVersion": 3,
+  "id": "morte.idle",
+  "name": "Morte Idle",
+  "description": "Gives Morte a life while you work and while you are away: bored when the computer is idle, nosy when you are busy, or quietly contemplative. Pauses while an agent is working.",
+  "version": "2.0.0",
+  "runtime": "javascript",
+  "icon": "sparkles",
+  "sdkVersion": "3.0.0",
+  "entry": "index.js",
+  "assets": {},
+  "permissions": [
+    "pet:speak",
+    "pet:move",
+    "pet:animate",
+    "pet:reaction",
+    "pets:read",
+    "audio",
+    "events",
+    "status",
+    "commands",
+    "storage"
+  ],
+  "configSchema": {
+    "idleMood": {
+      "type": "select",
+      "default": "bored",
+      "label": "Mood when the computer is idle",
+      "description": "No mouse or keyboard input for 2 minutes.",
+      "options": [
+        {
+          "value": "bored",
+          "label": "Bored"
+        },
+        {
+          "value": "engaged",
+          "label": "Engaged"
+        },
+        {
+          "value": "contemplative",
+          "label": "Contemplative"
+        },
+        {
+          "value": "off",
+          "label": "Off (stays quiet)"
+        }
+      ]
+    },
+    "workingMood": {
+      "type": "select",
+      "default": "engaged",
+      "label": "Mood when you are working",
+      "description": "Mouse or keyboard in use. He notices within about 15 seconds.",
+      "options": [
+        {
+          "value": "bored",
+          "label": "Bored"
+        },
+        {
+          "value": "engaged",
+          "label": "Engaged"
+        },
+        {
+          "value": "contemplative",
+          "label": "Contemplative"
+        },
+        {
+          "value": "off",
+          "label": "Off (stays quiet)"
+        }
+      ]
+    },
+    "awayAfterMin": {
+      "type": "number",
+      "default": 10,
+      "label": "Go quiet after (minutes idle)",
+      "description": "After this long idle, or when the screen locks, he stops everything and stays silent (Away)."
+    },
+    "mood": {
+      "type": "select",
+      "default": "auto",
+      "label": "Mood override",
+      "description": "Auto follows the two settings above. Also set from his right-click menu.",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Auto (by computer state)"
+        },
+        {
+          "value": "bored",
+          "label": "Bored"
+        },
+        {
+          "value": "engaged",
+          "label": "Engaged"
+        },
+        {
+          "value": "contemplative",
+          "label": "Contemplative"
+        },
+        {
+          "value": "off",
+          "label": "Off (stays quiet)"
+        }
+      ]
+    },
+    "behavioursBored": {
+      "type": "multiSelect",
+      "default": [
+        "roam",
+        "spin",
+        "trick",
+        "quip",
+        "bark"
+      ],
+      "label": "Bored: what he does",
+      "description": "Behaviors allowed in this mood.",
+      "options": [
+        {
+          "value": "roam",
+          "label": "Roam"
+        },
+        {
+          "value": "follow",
+          "label": "Follow the cursor"
+        },
+        {
+          "value": "quip",
+          "label": "Quips"
+        },
+        {
+          "value": "bark",
+          "label": "Barks"
+        },
+        {
+          "value": "spin",
+          "label": "Spin"
+        },
+        {
+          "value": "trick",
+          "label": "Tricks"
+        },
+        {
+          "value": "playdead",
+          "label": "Play dead"
+        },
+        {
+          "value": "shift",
+          "label": "Shift side to side"
+        },
+        {
+          "value": "contemplate",
+          "label": "Contemplate"
+        }
+      ]
+    },
+    "behavioursEngaged": {
+      "type": "multiSelect",
+      "default": [
+        "follow",
+        "quip",
+        "bark",
+        "trick",
+        "spin"
+      ],
+      "label": "Engaged: what he does",
+      "description": "Behaviors allowed in this mood.",
+      "options": [
+        {
+          "value": "roam",
+          "label": "Roam"
+        },
+        {
+          "value": "follow",
+          "label": "Follow the cursor"
+        },
+        {
+          "value": "quip",
+          "label": "Quips"
+        },
+        {
+          "value": "bark",
+          "label": "Barks"
+        },
+        {
+          "value": "spin",
+          "label": "Spin"
+        },
+        {
+          "value": "trick",
+          "label": "Tricks"
+        },
+        {
+          "value": "playdead",
+          "label": "Play dead"
+        },
+        {
+          "value": "shift",
+          "label": "Shift side to side"
+        },
+        {
+          "value": "contemplate",
+          "label": "Contemplate"
+        }
+      ]
+    },
+    "behavioursContemplative": {
+      "type": "multiSelect",
+      "default": [
+        "shift",
+        "playdead",
+        "contemplate"
+      ],
+      "label": "Contemplative: what he does",
+      "description": "Behaviors allowed in this mood.",
+      "options": [
+        {
+          "value": "roam",
+          "label": "Roam"
+        },
+        {
+          "value": "follow",
+          "label": "Follow the cursor"
+        },
+        {
+          "value": "quip",
+          "label": "Quips"
+        },
+        {
+          "value": "bark",
+          "label": "Barks"
+        },
+        {
+          "value": "spin",
+          "label": "Spin"
+        },
+        {
+          "value": "trick",
+          "label": "Tricks"
+        },
+        {
+          "value": "playdead",
+          "label": "Play dead"
+        },
+        {
+          "value": "shift",
+          "label": "Shift side to side"
+        },
+        {
+          "value": "contemplate",
+          "label": "Contemplate"
+        }
+      ]
+    },
+    "pace": {
+      "type": "select",
+      "default": "lively",
+      "label": "Pace",
+      "description": "How often Morte does something when idle.",
+      "options": [
+        {
+          "value": "lively",
+          "label": "Lively (every 15-40 s)"
+        },
+        {
+          "value": "relaxed",
+          "label": "Relaxed (every 30-90 s)"
+        },
+        {
+          "value": "sleepy",
+          "label": "Sleepy (every 1-3 min)"
+        }
+      ]
+    },
+    "sound": {
+      "type": "boolean",
+      "default": true,
+      "label": "Barks and sound",
+      "description": "Play Morte's voice clips. Off silences every mood."
+    },
+    "pauseWhenBusy": {
+      "type": "boolean",
+      "default": true,
+      "label": "Pause when the agent is busy",
+      "description": "Stay put while Claude Code is driving Morte."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# Tooling
+.idea
+.venv/
+node_modules/
+
+# Game-derived output: never commit!
+dist/
+hook/clips/
+hook/clips.meta.json
+hook/audition.html
+*.wav
+*.acm
+*.bam
+*.bif
+*.tlk
+*.webp
+*.zip
+
+# noise
+__pycache__/
+*.pyc

@@ -1,0 +1,11 @@
+{
+  "name": "morte",
+  "private": true,
+  "description": "Morte from Planescape: Torment as an OpenPets desktop pet, with a Claude Code voice hook.",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test \"hook/test/*.test.js\" \"plugin/test/*.test.mjs\"",
+    "check": "node hook/morte-hook.js --check"
+  }
+}

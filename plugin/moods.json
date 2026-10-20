@@ -1,0 +1,8 @@
+{
+  "_comment": "Build-time mood tuning for the Morte plugin. Which behaviors are allowed per mood is live config (openpets.plugin.json, DEFAULT_BEHAVIOURS in index.js); this file holds the relative weights among the allowed ones and a pace multiplier (below 1 = acts more often). Rebuild with: python pipeline/build_plugin.py --data-only",
+  "moods": {
+    "bored":         { "paceMul": 1.0, "weights": { "roam": 3, "follow": 1, "quip": 3, "bark": 2, "spin": 2, "trick": 3, "playdead": 1, "shift": 1, "contemplate": 1 } },
+    "engaged":       { "paceMul": 0.7, "weights": { "roam": 1, "follow": 3, "quip": 3, "bark": 2, "spin": 1, "trick": 2, "playdead": 1, "shift": 1, "contemplate": 1 } },
+    "contemplative": { "paceMul": 1.5, "weights": { "roam": 1, "follow": 1, "quip": 1, "bark": 1, "spin": 1, "trick": 1, "playdead": 2, "shift": 3, "contemplate": 3 } }
+  }
+}

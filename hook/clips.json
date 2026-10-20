@@ -1,0 +1,77 @@
+{
+    "clips": {
+        "thinking": [
+            "MRT123",
+            "MRT124",
+            "MRT125",
+            "MRT126",
+            "MRT128",
+            "MRT130",
+            "MRT132",
+            "MRT801B",
+            "MRT802B"
+        ],
+        "working": [
+            "MRT132",
+            "MRT801B",
+            "MRT802B",
+            "MRT128"
+        ],
+        "permission": [
+            "MRT371",
+            "MRT311B",
+            "MRT427A",
+            "MRT351"
+        ],
+        "success": [
+            "MRT415C",
+            "MRT419C",
+            "MRT305C",
+            "MRT450E",
+            "MRT430D",
+            "MRT011",
+            "MRT199"
+        ],
+        "error": [
+            "MRT306",
+            "MRT417D",
+            "MRT413B",
+            "MRT422E",
+            "MRT061",
+            "MRT073A",
+            "MRT357",
+            "MRT016",
+            "MRT453G"
+        ],
+        "question": [
+            "MRT311B",
+            "MRT515"
+        ],
+        "idle": [
+            "MRT042",
+            "MRT028",
+            "MRT311B",
+            "MRT515"
+        ],
+        "ambientBored": [
+            "MRT042",
+            "MRT028",
+            "MRT016",
+            "MRT515"
+        ],
+        "ambientEngaged": [
+            "MRT011",
+            "MRT427A",
+            "MRT311B",
+            "MRT123",
+            "MRT124",
+            "MRT125",
+            "MRT126",
+            "MRT128",
+            "MRT130",
+            "MRT132",
+            "MRT801B",
+            "MRT802B"
+        ]
+    }
+}
