@@ -3,6 +3,8 @@
 Morte from *Planescape: Torment* as an [OpenPets](https://docs.openpets.dev)
 desktop pet, with a Claude Code hook that gives him a voice.
 
+![Morte](./docs/Morte.gif)
+
 Everything game-derived (sprites, voice clips) is built locally from your own
 copy of *Planescape: Torment: Enhanced Edition* and is never committed.
 
